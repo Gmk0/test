@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test/widgets/CategoriesWidget.dart';
 import 'package:test/widgets/HomeAppBar.dart';
+import 'package:test/widgets/ItemsWidget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
         HomeAppBar(),
         Container(
           //temporary Height
-          height: 500,
+          // height: 500,
           padding: EdgeInsets.only(top: 15),
           decoration: BoxDecoration(
             color: Color(0xFFEDECF2),
@@ -53,6 +54,9 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+
+              //categorie le titre
+
               Container(
                 alignment: Alignment.centerLeft,
                 margin: EdgeInsets.symmetric(
@@ -68,7 +72,26 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+
+              //CATEGORIE LE WIDGET
               CategoriesWidget(),
+
+              //Meilleur ventes  titre
+
+              Container(
+                alignment: Alignment.centerLeft,
+                margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: Text(
+                  "MeilleurS vente",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF4C53A5),
+                  ),
+                ),
+              ),
+
+              ItemsWidget(),
             ],
           ),
         ),
