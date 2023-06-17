@@ -46,9 +46,11 @@ class ItemsWidget extends StatelessWidget {
                 ],
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, "ItemPage");
+                },
                 child: Container(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   child: Image.asset(
                     "images/$i.png",
                     height: 120,
